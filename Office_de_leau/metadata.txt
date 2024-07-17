@@ -1,0 +1,16 @@
+[general]
+name=Office de l'eau
+description=Test de plugin pour QGIS 3 fournissant un accès simple aux flux de géographiques WMS et WFS de GéoBretagne et d'autres ressources géographiques utiles à l'Office de l'eau Réunion.
+version=2.1.1
+qgisMinimumVersion=3.00
+qgisMaximumVersion=3.99
+author=Neogeo Technologies, repris par région Bretagne, repris par l'Office de l'eau Réunion
+email=vtoffolutti@eaureunion.fr
+icon=images/officedeleau.png
+experimental=False
+deprecated=False
+about=Test plugin for QGIS 3 providing simple access to WMS and WFS geographic flows from GéoBretagne and other useful geographic resources for Office de l'eau Réunion.
+tracker=https://github.com/ToffoluttiVittorio/qgis-plugin-for-georchestra/issues
+repository=https://github.com/ToffoluttiVittorio/qgis-plugin-for-georchestra
+homepage=https://github.com/ToffoluttiVittorio/qgis-plugin-for-georchestra/wiki
+tags=OLE,Office de l'eau,Office_de_l'eau,officedeleau

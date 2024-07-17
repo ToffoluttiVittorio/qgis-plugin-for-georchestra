@@ -1,0 +1,36 @@
+{
+  "title": "Office de l'eau Réunion",
+  "description": "Catalogue de l'Office de l'eau Réunion",
+  "type": "folder",
+  "children": [{
+      "title": "Test titre",
+      "description": "Test descirption de folder",
+      "type": "folder",
+      "children": [{
+			  "title": "Plan IGN",
+			  "description": "Plan IGN",
+			  "metadata_url": "https://geoservices.ign.fr/services-web-essentiels",
+			  "type": "wms_layer",
+			  "params": {
+				"url": "https://wxs.ign.fr/essentiels/geoportail/r/wms?tiled=true",
+				"name": "GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2",
+				"format": "image/png",
+				"srs": "EPSG:2154"
+			  }
+			},
+		{
+          "title": "Scan IGN",
+          "description": "Scans de l'IGN 2017 (scan différent selon l'échelle)",
+          "type": "wms_layer",
+          "metadata_url": "http://www.ign.fr/",
+          "params": {
+            "url": "https://tile.geobretagne.fr/gwc02/service/wms?tiled=true",
+            "name": "carte",
+            "format": "image/png",
+            "srs": "EPSG:2154"
+          }
+        }
+	    ]
+    }
+  ]
+}
