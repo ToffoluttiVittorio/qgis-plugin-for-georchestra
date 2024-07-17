@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-from qgis.PyQt.QtWidgets import QWidget, QDialog, QVBoxLayout, QLabel, QTextEdit, QFrame
+from qgis.PyQt.QtWidgets import QWidget, QDialog, QVBoxLayout, QLabel, QTextBrowser, QFrame
 from qgis.PyQt.QtGui import QPixmap
 
 from Office_de_leau.utils.plugin_globals import PluginGlobals
