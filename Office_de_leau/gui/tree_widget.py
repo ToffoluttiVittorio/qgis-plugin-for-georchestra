@@ -1,15 +1,22 @@
 # -*- coding: utf-8 -*-
 
+<<<<<<< HEAD
 from qgis.PyQt.QtWidgets import QTreeWidget, QAbstractItemView, QTreeWidgetItemIterator, QMessageBox
 from qgis.PyQt.QtCore import Qt, QByteArray, QDataStream, QIODevice
 from qgis.core import Qgis, QgsMessageLog, QgsCoordinateReferenceSystem, QgsCoordinateTransform, QgsProject
 from qgis.utils import iface
+=======
+from qgis.PyQt.QtWidgets import QTreeWidget, QAbstractItemView, QMessageBox, QTreeWidgetItemIterator
+from qgis.PyQt.QtCore import Qt, QByteArray, QDataStream, QIODevice
+from qgis.core import Qgis, QgsMessageLog
+>>>>>>> dev
 
 from Office_de_leau.gui.tree_items import TreeWidgetItem
 from Office_de_leau.utils.plugin_globals import PluginGlobals
 
 
 class TreeWidget(QTreeWidget):
+<<<<<<< HEAD
     
     # initiate tree widget "state" : True or False for each item depending on wether item is visible or hidden
     # save state for extent filter and text filter
@@ -20,6 +27,10 @@ class TreeWidget(QTreeWidget):
     
     """
     The tree widget used in the Indigeo dock
+=======
+    """
+    The tree widget used in the dock
+>>>>>>> dev
     """
 
     def __init__(self):
@@ -46,7 +57,10 @@ class TreeWidget(QTreeWidget):
         self.setDragEnabled(True)
         self.setAcceptDrops(True)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> dev
     def set_tree_content(self, resources_tree):
         """
         Creates the items of the tree widget
@@ -64,6 +78,7 @@ class TreeWidget(QTreeWidget):
 
         if resources_tree is None:
             QgsMessageLog.logMessage(u"Faute de fichier de configuration valide, aucune ressource ne peut être chargée "
+<<<<<<< HEAD
                                      u"dans le panneau de l'extension Office de l'eau Réunion.",
                                      tag=u"Indigeo", level=Qgis.Warning)
         elif resources_tree.children is not None and len(resources_tree.children) > 0:
@@ -175,10 +190,43 @@ class TreeWidget(QTreeWidget):
         
         # no text filter
         if searchtext == '':
+=======
+                                     u"dans le panneau.", level=Qgis.Warning)
+        elif resources_tree.children is not None and len(resources_tree.children) > 0:
+            for child in resources_tree.children:
+                create_subitem(child, self)
+
+                
+    def show_parents(self, item):
+        # check if item has parent
+        if item.parent():
+            # show parent
+            parent = item.parent()
+            parent.setHidden(False)
+            # next parent of parent
+            self.show_parents(parent)
+
+    def show_children(self, item):
+        # check if item has children
+        if item.childCount() > 0:
+            # show all children
+            for child_index in range(0, item.childCount()):
+                child = item.child(child_index)
+                child.setHidden(False)
+                # next children of children
+                self.show_children(child)
+            
+    def filter_by_text(self, searchtext):
+        # no text filter
+        if searchtext == '':
+            # folds all folders
+            self.collapseAll()
+>>>>>>> dev
             # show all items
             it = QTreeWidgetItemIterator(self)
             while it.value():
                 item = it.value()
+<<<<<<< HEAD
                 tree_state_text[item.item_data.ident] = True
                 it += 1
             # folds all folders if no extent filter is set
@@ -186,11 +234,19 @@ class TreeWidget(QTreeWidget):
                 self.collapseAll()
             
         # text filter
+=======
+                item.setHidden(False)
+                it += 1
+                 # text filter
+
+        # if no filter is set, folds all items
+>>>>>>> dev
         else:
             # hide all items
             it = QTreeWidgetItemIterator(self)
             while it.value():
                 item = it.value()
+<<<<<<< HEAD
                 tree_state_text[item.item_data.ident] = False
                 it += 1
                 
@@ -342,6 +398,25 @@ class TreeWidget(QTreeWidget):
         else:
             return False
         
+=======
+                item.setHidden(True)
+                it += 1
+            # iterate through all items
+            it = QTreeWidgetItemIterator(self)
+            while it.value():
+                item = it.value()
+                # if text is found in item
+                if searchtext.lower() in item.text(0).lower():
+                    # make this item visible
+                    item.setHidden(False)
+                    # make its parent visibles
+                    self.show_parents(item)
+                    # make its children visible
+                    self.show_children(item)
+                it += 1
+            # unfold all folders
+            self.expandAll()
+>>>>>>> dev
 
     def update_visibility_of_tree_items(self):
         """
@@ -351,6 +426,7 @@ class TreeWidget(QTreeWidget):
         """
         hide_items_with_warn_status = PluginGlobals.instance().HIDE_RESOURCES_WITH_WARN_STATUS
         hide_empty_groups = PluginGlobals.instance().HIDE_EMPTY_GROUPS
+<<<<<<< HEAD
         
         # iterator for hidden items only
         it = QTreeWidgetItemIterator(self, QTreeWidgetItemIterator.Hidden)
@@ -375,11 +451,19 @@ class TreeWidget(QTreeWidget):
 
         def update_visibility_of_subitems(item, hide_empty_groups, hide_items_with_warn_status):
             
+=======
+
+        def update_visibility_of_subitems(item, hide_empty_groups, hide_items_with_warn_status):
+
+>>>>>>> dev
             if hasattr(item, "item_data") and item.item_data.status == PluginGlobals.instance().NODE_STATUS_WARN:
                 item.setHidden(hide_items_with_warn_status)
 
             child_count = item.childCount()
+<<<<<<< HEAD
             
+=======
+>>>>>>> dev
             if child_count > 0:
                 for i in range(child_count):
                     sub_item = item.child(i)
@@ -390,7 +474,10 @@ class TreeWidget(QTreeWidget):
 
         update_visibility_of_subitems(self.invisibleRootItem(), hide_empty_groups, hide_items_with_warn_status)
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> dev
     def tree_item_double_clicked(self, item, column):
         """
         Handles double clic on an item
