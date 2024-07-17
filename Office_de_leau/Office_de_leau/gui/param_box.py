@@ -6,9 +6,9 @@ from qgis.PyQt.QtCore import Qt
 from qgis.core import *
 from qgis.gui import *
 
-from geobretagne.utils.plugin_globals import PluginGlobals
-from geobretagne.nodes.tree_node_factory import TreeNodeFactory
-from geobretagne.nodes.tree_node_factory import download_tree_config_file
+from Office_de_leau.utils.plugin_globals import PluginGlobals
+from Office_de_leau.nodes.tree_node_factory import TreeNodeFactory
+from Office_de_leau.nodes.tree_node_factory import download_tree_config_file
 
 
 class ParamBox(QDialog):

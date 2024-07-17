@@ -3,7 +3,7 @@
 from qgis.PyQt.QtCore import Qt
 from qgis.PyQt.QtWidgets import QWidget, QDockWidget, QVBoxLayout, QLineEdit
 
-from geobretagne.gui.tree_widget import TreeWidget
+from Office_de_leau.gui.tree_widget import TreeWidget
 
 
 class DockWidget(QDockWidget):
