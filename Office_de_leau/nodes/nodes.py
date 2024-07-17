@@ -21,6 +21,8 @@ class FavoritesTreeNode:
         self.description = description
         self.status = status
         self.metadata_url = metadata_url
+        self.ident = ident
+        self.bounding_boxes = bounding_boxes
         self.children = []
         self.can_be_added_to_map = False
         self.icon = None
