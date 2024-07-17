@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 
-import sys
 import os
 from Office_de_leau.utils.singleton import Singleton
 from qgis.PyQt.QtCore import QSettings
@@ -15,10 +14,9 @@ class PluginGlobals:
     plugin_path = None
 
     # Plugin infos
-    # PLUGIN_TAG = u"GéoGrandEst"
     # PLUGIN_TAG = u"geobretagne"
     PLUGIN_TAG = u"Office de l'eau Réunion"
-    PLUGIN_VERSION = u"0.9.1"
+    PLUGIN_VERSION = u"0.1.1"
     PLUGIN_SOURCE_REPOSITORY = u"https://github.com/ToffoluttiVittorio/qgis-plugin-for-georchestra"
 
     # Tree nodes types
@@ -95,10 +93,11 @@ class PluginGlobals:
 
         # Read the qgis plugin settings
         s = QSettings()
+        # False by default and u"0" so that parameter is checked the 1st time user opens plugin, else invert
         self.CONFIG_FILES_DOWNLOAD_AT_STARTUP = \
             True if s.value(
                 u"{0}/config_files_download_at_startup".format(self.PLUGIN_TAG),
-                self.CONFIG_FILES_DOWNLOAD_AT_STARTUP) == u"1" else False
+                self.CONFIG_FILES_DOWNLOAD_AT_STARTUP) == u"0" else True
 
         self.CONFIG_DIR_NAME = s.value(u"{0}/config_dir_name".format(self.PLUGIN_TAG), self.CONFIG_DIR_NAME)
 
@@ -106,12 +105,14 @@ class PluginGlobals:
 
         self.CONFIG_FILE_URLS = s.value(u"{0}/config_file_urls".format(self.PLUGIN_TAG), self.CONFIG_FILE_URLS)
 
+        # False by default so that parameter is checked the 1st time user opens plugin, else invert
         self.HIDE_RESOURCES_WITH_WARN_STATUS = True if s.value(
             u"{0}/hide_resources_with_warn_status".format(self.PLUGIN_TAG),
-            self.HIDE_RESOURCES_WITH_WARN_STATUS) == u"1" else False
+            self.HIDE_RESOURCES_WITH_WARN_STATUS) == u"0" else True
 
+        # False by default so that parameter is checked the 1st time user opens plugin, else invert
         self.HIDE_EMPTY_GROUPS = True if s.value(
-            u"{0}/hide_empty_groups".format(self.PLUGIN_TAG), self.HIDE_EMPTY_GROUPS) == u"1" else False
+            u"{0}/hide_empty_groups".format(self.PLUGIN_TAG), self.HIDE_EMPTY_GROUPS) == u"0" else True
 
         self.config_dir_path = os.path.join(self.plugin_path, self.CONFIG_DIR_NAME)
         self.config_file_path = os.path.join(self.config_dir_path, self.CONFIG_FILE_NAMES[0])
@@ -127,7 +128,7 @@ class PluginGlobals:
         s = QSettings()
         s.setValue(u"{0}/hide_resources_with_warn_status".format(self.PLUGIN_TAG), u"1")
         s.setValue(u"{0}/hide_empty_groups".format(self.PLUGIN_TAG), u"1")
-        s.setValue(u"{0}/config_files_download_at_startup".format(self.PLUGIN_TAG), u"0")#0
+        s.setValue(u"{0}/config_files_download_at_startup".format(self.PLUGIN_TAG), u"1")#0
         s.setValue(u"{0}/config_file_names".format(self.PLUGIN_TAG), ["config.json"])
         s.setValue(u"{0}/config_file_urls".format(self.PLUGIN_TAG),
                    ["https://raw.githubusercontent.com/ToffoluttiVittorio/qgis-plugin-for-georchestra/master/Office_de_l%27eau/config/config.json"])

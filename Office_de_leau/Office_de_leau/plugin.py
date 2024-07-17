@@ -68,7 +68,6 @@ class SimpleAccessPlugin:
         Crée le menu principal du plugin
         """
         plugin_menu = self.iface.pluginMenu()
-        ##self.plugin_menu = QMenu(u"GéoBretagne", plugin_menu)
         self.plugin_menu = QMenu(u"Office de leau", plugin_menu)
         plugin_menu.addMenu(self.plugin_menu)
 
