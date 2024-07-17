@@ -11,7 +11,6 @@ from Office_de_leau.gui.about_box import AboutBox
 from Office_de_leau.gui.param_box import ParamBox
 from Office_de_leau.nodes.tree_node_factory import TreeNodeFactory
 from Office_de_leau.nodes.tree_node_factory import download_tree_config_file
-from Office_de_leau.utils.config import PluginConfig
 
 
 class SimpleAccessPlugin:
@@ -31,9 +30,6 @@ class SimpleAccessPlugin:
         config_struct = None
         config_string = ""
 
-        # URL de configuration mise à jour
-        #PluginGlobals.instance().CONFIG_FILE_URLS[0] = PluginConfig.CONFIG_FILE_URL
-
         # Téléchargez la config si nécessaire
         if self.need_download_tree_config_file():
             download_tree_config_file(PluginGlobals.instance().CONFIG_FILE_URLS[0])
@@ -48,6 +44,7 @@ class SimpleAccessPlugin:
         - l'utilisateur veut qu'il soit téléchargé au démarrage du plugin
         - le fichier est actuellement manquant
         """
+
         return (PluginGlobals.instance().CONFIG_FILES_DOWNLOAD_AT_STARTUP > 0 or
                 not os.path.isfile(PluginGlobals.instance().config_file_path))
 
@@ -57,6 +54,7 @@ class SimpleAccessPlugin:
         Crée un élément de menu dans le menu de QGIS
         Crée un DockWidget contenant l'arborescence des ressources
         """
+
         # Créez un menu
         self.createPluginMenu()
 
@@ -70,6 +68,7 @@ class SimpleAccessPlugin:
         Crée le menu principal du plugin
         """
         plugin_menu = self.iface.pluginMenu()
+        ##self.plugin_menu = QMenu(u"GéoBretagne", plugin_menu)
         self.plugin_menu = QMenu(u"Office de leau", plugin_menu)
         plugin_menu.addMenu(self.plugin_menu)
 
