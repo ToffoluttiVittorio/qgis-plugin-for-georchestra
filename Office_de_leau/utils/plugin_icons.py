@@ -6,8 +6,8 @@ from qgis.PyQt.QtWidgets import QStyle
 from qgis.core import QgsApplication
 import os
 
-from geobretagne.utils.plugin_globals import PluginGlobals
-from geobretagne.utils.singleton import Singleton
+from Office_de_leau.utils.plugin_globals import PluginGlobals
+from Office_de_leau.utils.singleton import Singleton
 
 
 @Singleton

@@ -3,7 +3,7 @@
 from qgis.PyQt.QtWidgets import QTreeWidgetItem, QMenu
 from qgis.PyQt.QtCore import Qt
 
-from geobretagne.utils.plugin_globals import PluginGlobals
+from Office_de_leau.utils.plugin_globals import PluginGlobals
 
 
 def expand_item_and_subitems(item):
@@ -47,7 +47,7 @@ def contains_unexpanded_subitems(item):
 
 class TreeWidgetItem(QTreeWidgetItem):
     """
-    An item of the Géo2France tree view
+    An item of the Office de l'eau Réunion tree view
     """
   
     def __init__(self, parent, item_data=None):

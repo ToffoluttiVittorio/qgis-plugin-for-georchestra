@@ -8,7 +8,7 @@ from geobretagne.gui.tree_widget import TreeWidget
 
 class DockWidget(QDockWidget):
     """
-    The dock widget containing the tree view displaying the Géo2France resources
+    The dock widget containing the tree view displaying the Office de l'eau Réunion resources
     """
 
     def __init__(self, parent = None):
@@ -21,7 +21,7 @@ class DockWidget(QDockWidget):
     def init_gui(self):
         """
         """
-        self.setWindowTitle(u'GéoBretagne')
+        self.setWindowTitle(u"Office de l'eau Réunion")
         self.setAllowedAreas(Qt.LeftDockWidgetArea | Qt.RightDockWidgetArea)
 
         # Search bar.

@@ -6,7 +6,7 @@ from urllib.request import Request, urlopen
 
 from qgis.core import Qgis, QgsMessageLog
 
-from geobretagne.utils.plugin_globals import PluginGlobals
+from Office_de_leau.utils.plugin_globals import PluginGlobals
 from .nodes import WmsLayerTreeNode, WmsStyleLayerTreeNode, WmtsLayerTreeNode, WfsFeatureTypeTreeNode
 from .nodes import WfsFeatureTypeFilterTreeNode, GdalWmsConfigFileTreeNode, FolderTreeNode
 

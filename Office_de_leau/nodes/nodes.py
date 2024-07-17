@@ -2,8 +2,8 @@
 
 import os
 
-from geobretagne.utils.plugin_globals import PluginGlobals
-from geobretagne.utils.plugin_icons import PluginIcons
+from Office_de_leau.utils.plugin_globals import PluginGlobals
+from Office_de_leau.utils.plugin_icons import PluginIcons
 
 
 class FavoritesTreeNode:

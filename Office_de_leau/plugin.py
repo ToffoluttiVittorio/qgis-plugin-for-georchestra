@@ -5,12 +5,13 @@ from qgis.PyQt.QtCore import Qt
 
 import os.path
 
-from geobretagne.utils.plugin_globals import PluginGlobals
-from geobretagne.gui.dock import DockWidget
-from geobretagne.gui.about_box import AboutBox
-from geobretagne.gui.param_box import ParamBox
-from geobretagne.nodes.tree_node_factory import TreeNodeFactory
-from geobretagne.nodes.tree_node_factory import download_tree_config_file
+from Office_de_leau.utils.plugin_globals import PluginGlobals
+from Office_de_leau.gui.dock import DockWidget
+from Office_de_leau.gui.about_box import AboutBox
+from Office_de_leau.gui.param_box import ParamBox
+from Office_de_leau.nodes.tree_node_factory import TreeNodeFactory
+from Office_de_leau.nodes.tree_node_factory import download_tree_config_file
+from Office_de_leau.utils.config import PluginConfig
 
 
 class SimpleAccessPlugin:
@@ -30,46 +31,46 @@ class SimpleAccessPlugin:
         config_struct = None
         config_string = ""
 
-        # Download the config if needed
+        # URL de configuration mise à jour
+        #PluginGlobals.instance().CONFIG_FILE_URLS[0] = PluginConfig.CONFIG_FILE_URL
+
+        # Téléchargez la config si nécessaire
         if self.need_download_tree_config_file():
             download_tree_config_file(PluginGlobals.instance().CONFIG_FILE_URLS[0])
 
-        # Read the resources tree file and update the GUI
+        # Lisez le fichier de l'arborescence des ressources et mettez à jour l'interface graphique
         self.ressources_tree = TreeNodeFactory(PluginGlobals.instance().config_file_path).root_node
 
     def need_download_tree_config_file(self):
         """
-        Do we need to download a new version of the resources tree file?
-        2 possible reasons:
-        - the user wants it to be downloading at plugin start up
-        - the file is currently missing
+        Doit-on télécharger une nouvelle version du fichier de l'arborescence des ressources ?
+        Deux raisons possibles :
+        - l'utilisateur veut qu'il soit téléchargé au démarrage du plugin
+        - le fichier est actuellement manquant
         """
-
         return (PluginGlobals.instance().CONFIG_FILES_DOWNLOAD_AT_STARTUP > 0 or
                 not os.path.isfile(PluginGlobals.instance().config_file_path))
 
     def initGui(self):
         """
-        Plugin GUI initialisation.
-        Creates a menu item in the menu of QGIS
-        Creates a DockWidget containing the tree of resources
+        Initialisation de l'interface graphique du plugin.
+        Crée un élément de menu dans le menu de QGIS
+        Crée un DockWidget contenant l'arborescence des ressources
         """
-
-        # Create a menu
+        # Créez un menu
         self.createPluginMenu()
 
-        # Create a dockable panel with a tree of resources
+        # Créez un panneau amovible avec une arborescence des ressources
         self.dock = DockWidget()
         self.dock.set_tree_content(self.ressources_tree)
         self.iface.addDockWidget(Qt.RightDockWidgetArea, self.dock)
 
     def createPluginMenu(self):
         """
-        Creates the plugin main menu
+        Crée le menu principal du plugin
         """
         plugin_menu = self.iface.pluginMenu()
-        ##self.plugin_menu = QMenu(u"Géo2France", plugin_menu)
-        self.plugin_menu = QMenu(u"GéoBretagne", plugin_menu)
+        self.plugin_menu = QMenu(u"Office de leau", plugin_menu)
         plugin_menu.addMenu(self.plugin_menu)
 
         show_panel_action = QAction(u'Afficher le panneau latéral', self.iface.mainWindow())
@@ -86,27 +87,27 @@ class SimpleAccessPlugin:
 
     def showPanelMenuTriggered(self):
         """
-        Shows the dock widget
+        Affiche le widget dock
         """
         self.dock.show()
         pass
 
     def aboutMenuTriggered(self):
         """
-        Shows the About box
+        Affiche la boîte de dialogue À propos
         """
         dialog = AboutBox(self.iface.mainWindow())
         dialog.exec_()
 
     def paramMenuTriggered(self):
         """
-        Shows the Param box
+        Affiche la boîte de dialogue des paramètres
         """
         dialog = ParamBox(self.iface.mainWindow(), self.dock)
         dialog.exec_()
 
     def unload(self):
         """
-        Removes the plugin menu
+        Supprime le menu du plugin
         """
         self.iface.pluginMenu().removeAction(self.plugin_menu.menuAction())
