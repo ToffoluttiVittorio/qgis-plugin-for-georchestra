@@ -1,10 +1,6 @@
 # -*- coding: utf-8 -*-
 
-<<<<<<< HEAD
 from qgis.PyQt.QtWidgets import QWidget, QDialog, QVBoxLayout, QLabel, QTextBrowser, QFrame
-=======
-from qgis.PyQt.QtWidgets import QWidget, QDialog, QVBoxLayout, QLabel, QTextEdit, QFrame
->>>>>>> dev
 from qgis.PyQt.QtGui import QPixmap
 
 from Office_de_leau.utils.plugin_globals import PluginGlobals
@@ -27,7 +23,6 @@ class AboutBox(QDialog):
         mainLayout.addWidget(self.logo)
 
 
-<<<<<<< HEAD
         title = u"À propos de l'extension Office de l'eau Réunion …"
         description1 = """Extension pour QGIS donnant un accès simplifié aux ressources géographiques de l'Office de l'eau Réunion. Version {}<br>""".format(PluginGlobals.instance().PLUGIN_VERSION)
         description2 = """Plus d'informations à l'adresse suivante :<br><a href='{0}'>{0}</a><br>""".format(PluginGlobals.instance().PLUGIN_SOURCE_REPOSITORY)
@@ -40,19 +35,6 @@ class AboutBox(QDialog):
         self.textArea.setHtml(description1)
         self.textArea.append(description2)
         self.textArea.append(description3)
-=======
-        title = u"À propos de l'extension Office de l'eau Réunion…"
-        description = u"""Extension pour QGIS donnant un accès simplifié aux ressources géographiques utiles à l'Office de l'eau Réunion
-Version {0}
-Plus d'informations à l'adresse suivante :
-{1}
-        """.format(PluginGlobals.instance().PLUGIN_VERSION,
-            PluginGlobals.instance().PLUGIN_SOURCE_REPOSITORY)
-
-        self.textArea = QTextEdit()
-        self.textArea.setReadOnly(True)
-        self.textArea.setText(description)
->>>>>>> dev
         self.textArea.setFrameShape(QFrame.NoFrame)
         mainLayout.addWidget(self.textArea)
 
@@ -61,9 +43,5 @@ Plus d'informations à l'adresse suivante :
 
         self.setLayout(mainLayout)
 
-<<<<<<< HEAD
         self.setFixedSize(500, 350)
-=======
-        self.setFixedSize(400, 250)
->>>>>>> dev
         self.setWindowTitle(title)
