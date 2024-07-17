@@ -2,112 +2,35 @@
 	"title": "Office de l'eau Réunion",
 	"description": "Catalogue de l'Office de l'eau Réunion",
 	"type": "folder",
-	"children": [
-	  {
-		"catid": "1",
-		"title": "UMR LETG - Littoral Environnement Télédétection et Géomatique",
-		"ident": "c1b90d69-15a0-48ff-bd4a-be87dc8be9c4",
-		"description": "UMR LETG - Littoral Environnement Télédétection et Géomatique",
+	"children": [{
+		"title": "Test titre",
+		"description": "Test descirption de folder",
 		"type": "folder",
-		"children": [
+		"children": [{
+				"title": "Plan IGN",
+				"description": "Plan IGN",
+				"metadata_url": "https://geoservices.ign.fr/services-web-essentiels",
+				"type": "wms_layer",
+				"params": {
+				  "url": "https://wxs.ign.fr/essentiels/geoportail/r/wms?tiled=true",
+				  "name": "GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2",
+				  "format": "image/png",
+				  "srs": "EPSG:2154"
+				}
+			  },
 		  {
-			"catid": "3",
-			"title": "France",
-			"ident": "060be2f6-a680-45cf-ad29-9c8e7e5c645a",
-			"description": "France",
-			"type": "folder",
-			"children": [
-			  {
-				"layer_id": 26562,
-				"ident": "6c20397e-632d-4ae5-88c6-b52c13bc5ac4",
-				"title": "Chaire maritime - Zones potentielles de pratique de la plaisance",
-				"description": "Couche de la modélisation des zones potentielles de pratique de la plaisance",
-				"metadata_url": "https://portail.indigeo.fr/geonetwork/srv/api/records/82f497cb-9f0e-4ca3-be20-0e823bcb3455",
-				"type": "wms_layer",
-				"params": {
-				  "url": "https://portail.indigeo.fr/geoserver/LETG-NANTES/wms",
-				  "name": "croisement_categoriezone",
-				  "format": "image/png",
-				  "srs": "EPSG:4326"
-				},
-				"bounding_boxes": [
-				  [
-					-10.0838357,
-					10.2499997,
-					40.0833323,
-					51.5569444
-				  ]
-				]
-			  },
-			  {
-				"layer_id": 28232,
-				"ident": "daab1cb1-b1cd-46d3-b367-a780efa5404e",
-				"title": "Chaire maritime - Site pilote",
-				"description": "Test site pilote",
-				"metadata_url": "https://portail.indigeo.fr/geonetwork/srv/api/records/75c4d788-b8fa-4b31-834b-11cb030a83a5",
-				"type": "wms_layer",
-				"params": {
-				  "url": "https://portail.indigeo.fr/geoserver/LETG-NANTES/wms",
-				  "name": "gt_ref_multi_atl_4326_chaire_site_pilote_2019_2024",
-				  "format": "image/png",
-				  "srs": "EPSG:4326"
-				},
-				"bounding_boxes": [
-				  [
-					-10.08383569999997,
-					-1.20524941646056,
-					46.2666942224551,
-					48.0420235789787
-				  ]
-				]
-			  },
-			  {
-				"layer_id": 28233,
-				"ident": "fbdeeebc-d30f-4c6f-8e8c-bd1963f6a49a",
-				"title": "Chaire maritime - Ports de commerce",
-				"description": "Numérisation des ports de commerce français métropolitain.",
-				"metadata_url": "https://portail.indigeo.fr/geonetwork/srv/api/records/c70d7911-79eb-4737-b456-2754756d647e",
-				"type": "wms_layer",
-				"params": {
-				  "url": "https://portail.indigeo.fr/geoserver/LETG-NANTES/wms",
-				  "name": "gt_ref_poi_met_4326_chaire_port_commerce_2021",
-				  "format": "image/png",
-				  "srs": "EPSG:4326"
-				},
-				"bounding_boxes": [
-				  [
-					-4.5363745750841264,
-					9.455568509082335,
-					41.388656943284715,
-					51.047365645841104
-				  ]
-				]
-			  },
-			  {
-				"layer_id": 28234,
-				"ident": "b0d36ad0-bb9b-454d-90bf-5de464879aa4",
-				"title": "Chaire maritime - Ports de pêche",
-				"description": "Numérisation des ports de pêche français métropolitain",
-				"metadata_url": "https://portail.indigeo.fr/geonetwork/srv/api/records/831ff62c-e913-4f2b-b92b-8e95bdd602d4",
-				"type": "wms_layer",
-				"params": {
-				  "url": "https://portail.indigeo.fr/geoserver/LETG-NANTES/wms",
-				  "name": "gt_ref_poi_met_4326_chaire_port_peche_2021",
-				  "format": "image/png",
-				  "srs": "EPSG:4326"
-				},
-				"bounding_boxes": [
-				  [
-					-5.055621337164015,
-					9.540624858286408,
-					41.38977107099331,
-					51.0480185095513
-				  ]
-				]
-			  }
-			]
+			"title": "Scan IGN",
+			"description": "Scans de l'IGN 2017 (scan différent selon l'échelle)",
+			"type": "wms_layer",
+			"metadata_url": "http://www.ign.fr/",
+			"params": {
+			  "url": "https://tile.geobretagne.fr/gwc02/service/wms?tiled=true",
+			  "name": "carte",
+			  "format": "image/png",
+			  "srs": "EPSG:2154"
+			}
 		  }
-		]
+		  ]
 	  }
 	]
   }
