@@ -21,7 +21,7 @@ class DockWidget(QDockWidget):
     def init_gui(self):
         """
         """
-        self.setWindowTitle(u'GéoBretagne')
+        self.setWindowTitle(u"Office de l'eau Réunion")
         self.setAllowedAreas(Qt.LeftDockWidgetArea | Qt.RightDockWidgetArea)
 
         # Search bar.

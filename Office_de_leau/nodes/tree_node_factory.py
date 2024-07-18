@@ -75,39 +75,39 @@ class TreeNodeFactory:
         node_type = tree_config.get('type', None)
         node_status = tree_config.get('status', None)
         node_metadata_url = tree_config.get('metadata_url', None)
-        node_ident = tree_config.get('ident', None)
+
         node_params = tree_config.get('params', None)
-        node_bounding_boxes = tree_config.get('bounding_boxes', None)
+
 
         if node_title:
             # Creation of the node
             if node_type == PluginGlobals.instance().NODE_TYPE_WMS_LAYER:
                 node = WmsLayerTreeNode(node_title, node_type, node_description,
-                                        node_status, node_metadata_url, node_ident, node_params, node_bounding_boxes, parent_node)
+                                        node_status, node_metadata_url, node_params, parent_node)
 
             elif node_type == PluginGlobals.instance().NODE_TYPE_WMS_LAYER_STYLE:
                 node = WmsStyleLayerTreeNode(node_title, node_type, node_description,
-                                             node_status, node_metadata_url, node_ident, node_params, node_bounding_boxes, parent_node)
+                                             node_status, node_metadata_url, node_params, parent_node)
 
             elif node_type == PluginGlobals.instance().NODE_TYPE_WMTS_LAYER:
                 node = WmtsLayerTreeNode(node_title, node_type, node_description,
-                                         node_status, node_metadata_url, node_ident, node_params, node_bounding_boxes, parent_node)
+                                         node_status, node_metadata_url, node_params, parent_node)
 
             elif node_type == PluginGlobals.instance().NODE_TYPE_WFS_FEATURE_TYPE:
                 node = WfsFeatureTypeTreeNode(node_title, node_type, node_description,
-                                              node_status, node_metadata_url, node_ident, node_params, node_bounding_boxes, parent_node)
+                                              node_status, node_metadata_url, node_params, parent_node)
 
             elif node_type == PluginGlobals.instance().NODE_TYPE_WFS_FEATURE_TYPE_FILTER:
                 node = WfsFeatureTypeFilterTreeNode(node_title, node_type, node_description,
-                                                    node_status, node_metadata_url, node_ident, node_params, node_bounding_boxes, parent_node)
+                                                    node_status, node_metadata_url, node_params, parent_node)
 
             elif node_type == PluginGlobals.instance().NODE_TYPE_GDAL_WMS_CONFIG_FILE:
                 node = GdalWmsConfigFileTreeNode(node_title, node_type, node_description,
-                                                 node_status, node_metadata_url, node_ident, node_params, node_bounding_boxes, parent_node)
+                                                 node_status, node_metadata_url, node_params, parent_node)
 
             else:
                 node = FolderTreeNode(node_title, node_type, node_description,
-                                      node_status, node_metadata_url, node_ident, node_params, node_bounding_boxes, parent_node)
+                                      node_status, node_metadata_url, node_params, parent_node)
 
             # Creation of the node children
             node_children = tree_config.get('children', [])
