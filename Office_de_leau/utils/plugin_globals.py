@@ -47,7 +47,7 @@ class PluginGlobals:
     CONFIG_FILES_DOWNLOAD_AT_STARTUP = True
     CONFIG_DIR_NAME = "config"
     CONFIG_FILE_NAMES = ["config.json"]
-    CONFIG_FILE_URLS = ["https://raw.githubusercontent.com/ToffoluttiVittorio/qgis-plugin-for-georchestra/master/Office_de_l%27eau/config/config.json"]
+    CONFIG_FILE_URLS = ["https://raw.githubusercontent.com/ToffoluttiVittorio/qgis-plugin-for-georchestra/master/Office_de_leau/config/config.json"]
 
     # Hide resources with status = warn
     HIDE_RESOURCES_WITH_WARN_STATUS = True
