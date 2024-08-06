@@ -1,11 +1,214 @@
 {
-    "title": "Office de l'eau Réunion",
-    "description": "Catalogue de l'Office de l'eau Réunion",
+    "title": "Catalogue",
+    "description": "Catalogue des couches géographiques",
     "type": "folder",
     "children": [
         {
-            "title": "Test titre",
-            "description": "Test descirption de folder",
+            "title": "Sandre",
+            "description": "Catalogue Sandre",
+            "type": "folder",
+            "children": [
+                {
+                    "title": "Rivières",
+                    "description": "Données sur les rivières",
+                    "type": "wms_layer",
+                    "metadata_url": "https://www.sandre.eaufrance.fr/donnees/rivières",
+                    "params": {
+                        "url": "https://wms.sandre.eaufrance.fr?service=WMS",
+                        "name": "rivers",
+                        "format": "image/png",
+                        "srs": "EPSG:4326"
+                    }
+                },
+                {
+                    "title": "Lacs",
+                    "description": "Données sur les lacs",
+                    "type": "wms_layer",
+                    "metadata_url": "https://www.sandre.eaufrance.fr/donnees/lacs",
+                    "params": {
+                        "url": "https://wms.sandre.eaufrance.fr?service=WMS",
+                        "name": "lakes",
+                        "format": "image/png",
+                        "srs": "EPSG:4326"
+                    }
+                },
+                {
+                    "title": "Bassin versant",
+                    "description": "Données sur les bassins versants",
+                    "type": "wms_layer",
+                    "metadata_url": "https://www.sandre.eaufrance.fr/donnees/bassins-versants",
+                    "params": {
+                        "url": "https://wms.sandre.eaufrance.fr?service=WMS",
+                        "name": "watersheds",
+                        "format": "image/png",
+                        "srs": "EPSG:4326"
+                    }
+                },
+                {
+                    "title": "Stations hydrométriques",
+                    "description": "Localisation des stations hydrométriques",
+                    "type": "wms_layer",
+                    "metadata_url": "https://www.sandre.eaufrance.fr/donnees/stations-hydrometriques",
+                    "params": {
+                        "url": "https://wms.sandre.eaufrance.fr?service=WMS",
+                        "name": "hydrometric_stations",
+                        "format": "image/png",
+                        "srs": "EPSG:4326"
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Département de la Réunion",
+            "description": "Catalogue du Département de la Réunion",
+            "type": "folder",
+            "children": [
+                {
+                    "title": "Zones de risques",
+                    "description": "Zones de risques naturelles",
+                    "type": "wms_layer",
+                    "metadata_url": "https://www.reunion.fr/donnees/zones-risques",
+                    "params": {
+                        "url": "https://wms.reunion.fr?service=WMS",
+                        "name": "risk_zones",
+                        "format": "image/png",
+                        "srs": "EPSG:4326"
+                    }
+                },
+                {
+                    "title": "Répartition de la végétation",
+                    "description": "Répartition des types de végétation",
+                    "type": "wms_layer",
+                    "metadata_url": "https://www.reunion.fr/donnees/vegetation",
+                    "params": {
+                        "url": "https://wms.reunion.fr?service=WMS",
+                        "name": "vegetation_distribution",
+                        "format": "image/png",
+                        "srs": "EPSG:4326"
+                    }
+                },
+                {
+                    "title": "Réseaux d'eau potable",
+                    "description": "Réseaux de distribution d'eau potable",
+                    "type": "wms_layer",
+                    "metadata_url": "https://www.reunion.fr/donnees/reseaux-eau-potable",
+                    "params": {
+                        "url": "https://wms.reunion.fr?service=WMS",
+                        "name": "drinking_water_network",
+                        "format": "image/png",
+                        "srs": "EPSG:4326"
+                    }
+                },
+                {
+                    "title": "Réservoirs",
+                    "description": "Localisation des réservoirs d'eau",
+                    "type": "wms_layer",
+                    "metadata_url": "https://www.reunion.fr/donnees/reservoirs",
+                    "params": {
+                        "url": "https://wms.reunion.fr?service=WMS",
+                        "name": "reservoirs",
+                        "format": "image/png",
+                        "srs": "EPSG:4326"
+                    }
+                }
+            ]
+        },
+        {
+            "title": "Office de l'eau",
+            "description": "Catalogue de l'Office de l'eau",
+            "type": "folder",
+            "children": [
+                {
+                    "title": "Office de l'eau Réunion",
+                    "description": "Catalogue de l'Office de l'eau Réunion",
+                    "type": "folder",
+                    "children": [
+                        {
+                            "title": "Qualité de l'eau",
+                            "description": "Données sur la qualité de l'eau",
+                            "type": "wms_layer",
+                            "metadata_url": "https://www.office-eau.reunion.fr/qualite-eau",
+                            "params": {
+                                "url": "https://wms.office-eau.reunion.fr?service=WMS",
+                                "name": "water_quality",
+                                "format": "image/png",
+                                "srs": "EPSG:4326"
+                            }
+                        },
+                        {
+                            "title": "Réseau hydraulique",
+                            "description": "Réseau de distribution hydraulique",
+                            "type": "wms_layer",
+                            "metadata_url": "https://www.office-eau.reunion.fr/reseau-hydraulique",
+                            "params": {
+                                "url": "https://wms.office-eau.reunion.fr?service=WMS",
+                                "name": "hydraulic_network",
+                                "format": "image/png",
+                                "srs": "EPSG:4326"
+                            }
+                        },
+                        {
+                            "title": "Stations de mesure de l'eau",
+                            "description": "Stations de mesure de la qualité et du débit de l'eau",
+                            "type": "wms_layer",
+                            "metadata_url": "https://www.office-eau.reunion.fr/stations-mesure",
+                            "params": {
+                                "url": "https://wms.office-eau.reunion.fr?service=WMS",
+                                "name": "water_measurement_stations",
+                                "format": "image/png",
+                                "srs": "EPSG:4326"
+                            }
+                        },
+                        {
+                            "title": "Zones de captage",
+                            "description": "Zones de captage des ressources en eau",
+                            "type": "wms_layer",
+                            "metadata_url": "https://www.office-eau.reunion.fr/zones-captage",
+                            "params": {
+                                "url": "https://wms.office-eau.reunion.fr?service=WMS",
+                                "name": "catchment_areas",
+                                "format": "image/png",
+                                "srs": "EPSG:4326"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "title": "ARS",
+            "description": "Catalogue de l'Agence Régionale de Santé",
+            "type": "folder",
+            "children": [
+                {
+                    "title": "Sites de santé",
+                    "description": "Localisation des sites de santé",
+                    "type": "wms_layer",
+                    "metadata_url": "https://www.ars.reunion.fr/sites-sante",
+                    "params": {
+                        "url": "https://wms.ars.reunion.fr?service=WMS",
+                        "name": "health_sites",
+                        "format": "image/png",
+                        "srs": "EPSG:4326"
+                    }
+                },
+                {
+                    "title": "Alertes sanitaires",
+                    "description": "Alertes sanitaires en cours",
+                    "type": "wms_layer",
+                    "metadata_url": "https://www.ars.reunion.fr/alertes-sanitaires",
+                    "params": {
+                        "url": "https://wms.ars.reunion.fr?service=WMS",
+                        "name": "health_alerts",
+                        "format": "image/png",
+                        "srs": "EPSG:4326"
+                    }
+                }
+            ]
+        },
+        {
+            "title": "IGN",
+            "description": "Fonds de plan IGN",
             "type": "folder",
             "children": [
                 {
@@ -22,17 +225,4 @@
                 },
                 {
                     "title": "Scan IGN",
-                    "description": "Scans de l'IGN 2017 (scan différent selon l'échelle)",
-                    "type": "wms_layer",
-                    "metadata_url": "http://www.ign.fr/",
-                    "params": {
-                        "url": "https://tile.geobretagne.fr/gwc02/service/wms?tiled=true",
-                        "name": "carte",
-                        "format": "image/png",
-                        "srs": "EPSG:2154"
-                    }
-                }
-            ]
-        }
-    ]
-}
+                    "description": "Scans de l'IGN 2017
