@@ -5,7 +5,7 @@
     "children": [
         {
             "title": "PEIGEO",
-            "description": "Catalogue de peigeo",
+            "description": "Catalogue de Peigeo",
             "type": "folder",
             "children": [
                 {
@@ -14,8 +14,8 @@
                     "type": "wms_layer",
                     "metadata_url": "http://peigeo.re:8080/geonetwork/srv/fre/catalog.search#/metadata/5d4d1bd3-7bd9-406d-8687-8b84a135bea8",
                     "params": {
-                        "url": "https://services.sandre.eaufrance.fr/geo/MasseDEau_VEDL2019?",
-                        "name": "carte",
+                        "url": "https://services.sandre.eaufrance.fr/geo/MasseDEau_VEDL2019?service=WMS&request=GetCapabilities",
+                        "name": "MasseDEau_VEDL2019",
                         "format": "image/png",
                         "srs": "EPSG:2154"
                     }
@@ -33,8 +33,8 @@
                     "type": "wms_layer",
                     "metadata_url": "http://peigeo.re:8080/geonetwork/srv/fre/catalog.search#/metadata/f3690b95-3446-4431-b133-5ffcf864ca2e",
                     "params": {
-                        "url": "https://services.sandre.eaufrance.fr/geo/MasseDEau_VEDL2019?",
-                        "name": "carte",
+                        "url": "https://services.sandre.eaufrance.fr/geo/MasseDEau_VEDL2019?service=WMS&request=GetCapabilities",
+                        "name": "MasseDEau_VEDL2019",
                         "format": "image/png",
                         "srs": "EPSG:2154"
                     }
@@ -48,12 +48,12 @@
             "children": [
                 {
                     "title": "Points de prélèvements associés aux stations de mesure de la qualité des eaux superficielles",
-                    "description": "Description",
+                    "description": "Description des points de prélèvements",
                     "type": "wms_layer",
                     "metadata_url": "https://demo.georchestra.org/datahub/dataset/7668705b-154d-48b3-965c-f09c50716812",
                     "params": {
-                        "url": "https://services.sandre.eaufrance.fr/geo/stq",
-                        "name": "carte",
+                        "url": "https://services.sandre.eaufrance.fr/geo/stq?service=WMS&request=GetCapabilities",
+                        "name": "PointsDePrelevements",
                         "format": "image/png",
                         "srs": "EPSG:2154"
                     }
