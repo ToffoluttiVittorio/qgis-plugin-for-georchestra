@@ -10,7 +10,7 @@
             "children": [
                 {
                     "title": "Rivières",
-                    "description": "Données sur les rivières",
+                    "description": "Données sur les rivières en France",
                     "type": "wms_layer",
                     "metadata_url": "https://www.sandre.eaufrance.fr/donnees/rivières",
                     "params": {
@@ -22,7 +22,7 @@
                 },
                 {
                     "title": "Lacs",
-                    "description": "Données sur les lacs",
+                    "description": "Données sur les lacs en France",
                     "type": "wms_layer",
                     "metadata_url": "https://www.sandre.eaufrance.fr/donnees/lacs",
                     "params": {
@@ -33,8 +33,8 @@
                     }
                 },
                 {
-                    "title": "Bassin versant",
-                    "description": "Données sur les bassins versants",
+                    "title": "Bassins versants",
+                    "description": "Données sur les bassins versants en France",
                     "type": "wms_layer",
                     "metadata_url": "https://www.sandre.eaufrance.fr/donnees/bassins-versants",
                     "params": {
@@ -45,13 +45,13 @@
                     }
                 },
                 {
-                    "title": "Stations hydrométriques",
-                    "description": "Localisation des stations hydrométriques",
+                    "title": "Zones inondables",
+                    "description": "Zones susceptibles d'inondation",
                     "type": "wms_layer",
-                    "metadata_url": "https://www.sandre.eaufrance.fr/donnees/stations-hydrometriques",
+                    "metadata_url": "https://www.sandre.eaufrance.fr/donnees/zones-inondables",
                     "params": {
                         "url": "https://wms.sandre.eaufrance.fr?service=WMS",
-                        "name": "hydrometric_stations",
+                        "name": "flood_zones",
                         "format": "image/png",
                         "srs": "EPSG:4326"
                     }
@@ -65,7 +65,7 @@
             "children": [
                 {
                     "title": "Zones de risques",
-                    "description": "Zones de risques naturelles",
+                    "description": "Zones de risques naturelles à La Réunion",
                     "type": "wms_layer",
                     "metadata_url": "https://www.reunion.fr/donnees/zones-risques",
                     "params": {
@@ -77,7 +77,7 @@
                 },
                 {
                     "title": "Répartition de la végétation",
-                    "description": "Répartition des types de végétation",
+                    "description": "Répartition des types de végétation sur l'île",
                     "type": "wms_layer",
                     "metadata_url": "https://www.reunion.fr/donnees/vegetation",
                     "params": {
@@ -88,25 +88,13 @@
                     }
                 },
                 {
-                    "title": "Réseaux d'eau potable",
-                    "description": "Réseaux de distribution d'eau potable",
+                    "title": "Réseau hydrographique",
+                    "description": "Réseau hydrographique de La Réunion",
                     "type": "wms_layer",
-                    "metadata_url": "https://www.reunion.fr/donnees/reseaux-eau-potable",
+                    "metadata_url": "https://www.reunion.fr/donnees/reseau-hydrographique",
                     "params": {
                         "url": "https://wms.reunion.fr?service=WMS",
-                        "name": "drinking_water_network",
-                        "format": "image/png",
-                        "srs": "EPSG:4326"
-                    }
-                },
-                {
-                    "title": "Réservoirs",
-                    "description": "Localisation des réservoirs d'eau",
-                    "type": "wms_layer",
-                    "metadata_url": "https://www.reunion.fr/donnees/reservoirs",
-                    "params": {
-                        "url": "https://wms.reunion.fr?service=WMS",
-                        "name": "reservoirs",
+                        "name": "hydro_network",
                         "format": "image/png",
                         "srs": "EPSG:4326"
                     }
@@ -125,7 +113,7 @@
                     "children": [
                         {
                             "title": "Qualité de l'eau",
-                            "description": "Données sur la qualité de l'eau",
+                            "description": "Données sur la qualité de l'eau à La Réunion",
                             "type": "wms_layer",
                             "metadata_url": "https://www.office-eau.reunion.fr/qualite-eau",
                             "params": {
@@ -137,7 +125,7 @@
                         },
                         {
                             "title": "Réseau hydraulique",
-                            "description": "Réseau de distribution hydraulique",
+                            "description": "Réseau de distribution hydraulique à La Réunion",
                             "type": "wms_layer",
                             "metadata_url": "https://www.office-eau.reunion.fr/reseau-hydraulique",
                             "params": {
@@ -148,25 +136,13 @@
                             }
                         },
                         {
-                            "title": "Stations de mesure de l'eau",
-                            "description": "Stations de mesure de la qualité et du débit de l'eau",
+                            "title": "Réservoirs d'eau",
+                            "description": "Localisation des réservoirs d'eau",
                             "type": "wms_layer",
-                            "metadata_url": "https://www.office-eau.reunion.fr/stations-mesure",
+                            "metadata_url": "https://www.office-eau.reunion.fr/reservoirs",
                             "params": {
                                 "url": "https://wms.office-eau.reunion.fr?service=WMS",
-                                "name": "water_measurement_stations",
-                                "format": "image/png",
-                                "srs": "EPSG:4326"
-                            }
-                        },
-                        {
-                            "title": "Zones de captage",
-                            "description": "Zones de captage des ressources en eau",
-                            "type": "wms_layer",
-                            "metadata_url": "https://www.office-eau.reunion.fr/zones-captage",
-                            "params": {
-                                "url": "https://wms.office-eau.reunion.fr?service=WMS",
-                                "name": "catchment_areas",
+                                "name": "water_reservoirs",
                                 "format": "image/png",
                                 "srs": "EPSG:4326"
                             }
@@ -225,4 +201,17 @@
                 },
                 {
                     "title": "Scan IGN",
-                    "description": "Scans de l'IGN 2017
+                    "description": "Scans de l'IGN 2017 (scan différent selon l'échelle)",
+                    "type": "wms_layer",
+                    "metadata_url": "http://www.ign.fr/",
+                    "params": {
+                        "url": "https://tile.geobretagne.fr/gwc02/service/wms?tiled=true",
+                        "name": "carte",
+                        "format": "image/png",
+                        "srs": "EPSG:2154"
+                    }
+                }
+            ]
+        }
+    ]
+}
