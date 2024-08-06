@@ -4,17 +4,41 @@
     "type": "folder",
     "children": [
         {
-            "title": "Sandre",
-            "description": "Catalogue Sandre",
+            "title": "PEIGEO",
+            "description": "Catalogue de peigeo",
             "type": "folder",
             "children": [
+                {
+                    "title": "Masse d'eau",
+                    "description": "Une masse d'eau côtière est une partie distincte et significative des eaux de surface.",
+                    "type": "wms_layer",
+                    "metadata_url": "http://peigeo.re:8080/geonetwork/srv/fre/catalog.search#/metadata/5d4d1bd3-7bd9-406d-8687-8b84a135bea8",
+                    "params": {
+                        "url": "https://services.sandre.eaufrance.fr/geo/MasseDEau_VEDL2019?",
+                        "name": "carte",
+                        "format": "image/png",
+                        "srs": "EPSG:2154"
+                    }
+                }
             ]
         },
         {
-            "title": "Département de la Réunion",
-            "description": "Catalogue du Département de la Réunion",
+            "title": "BRGM",
+            "description": "Catalogue du BRGM",
             "type": "folder",
             "children": [
+                {
+                    "title": "Masses d'eau souterraines",
+                    "description": "Réunion - Version État des Lieux 2019",
+                    "type": "wms_layer",
+                    "metadata_url": "http://peigeo.re:8080/geonetwork/srv/fre/catalog.search#/metadata/f3690b95-3446-4431-b133-5ffcf864ca2e",
+                    "params": {
+                        "url": "https://services.sandre.eaufrance.fr/geo/MasseDEau_VEDL2019?",
+                        "name": "carte",
+                        "format": "image/png",
+                        "srs": "EPSG:2154"
+                    }
+                }
             ]
         },
         {
@@ -22,13 +46,18 @@
             "description": "Catalogue de l'Office de l'eau Réunion",
             "type": "folder",
             "children": [
-            ]
-        },
-        {
-            "title": "ARS",
-            "description": "Catalogue de l'Agence Régionale de Santé",
-            "type": "folder",
-            "children": [
+                {
+                    "title": "Points de prélèvements associés aux stations de mesure de la qualité des eaux superficielles",
+                    "description": "Description",
+                    "type": "wms_layer",
+                    "metadata_url": "https://demo.georchestra.org/datahub/dataset/7668705b-154d-48b3-965c-f09c50716812",
+                    "params": {
+                        "url": "https://services.sandre.eaufrance.fr/geo/stq",
+                        "name": "carte",
+                        "format": "image/png",
+                        "srs": "EPSG:2154"
+                    }
+                }
             ]
         },
         {
