@@ -1,0 +1,19 @@
+curl -X GET "http://localhost:9200/gn-records/_search?pretty" -H 'Content-Type: application/json' -d'
+{
+  "_source": ["linkUrlProtocolOGCWFS", "linkUrlProtocolOGCWMS", "resourceTitleObject.default", "metadataIdentifier"],
+  "size": 10000,
+  "query": {
+    "bool": {
+      "should": [
+        { "exists": { "field": "linkUrlProtocolOGCWFS" }},
+        { "exists": { "field": "linkUrlProtocolOGCWMS" }}
+      ]
+    }
+  }
+}
+' | jq '.hits.hits[] | {
+  title: ._source.resourceTitleObject.default,
+  WFS_url: ._source.linkUrlProtocolOGCWFS,
+  WMS_url: ._source.linkUrlProtocolOGCWMS,
+  dataset_id: ("https://georchestra.ole.re/datahub/dataset/" + ._source.metadataIdentifier)
+}' > result.json
