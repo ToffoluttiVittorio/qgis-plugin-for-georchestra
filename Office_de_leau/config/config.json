@@ -17,7 +17,7 @@
                         "url": "https://dev-carto.ole.re/geoserver/wms?",
                         "name": "ole:EPCI",
                         "format": "image/png",
-                        "srs": "EPSG:4326"
+                        "srs": "EPSG:2154"
                     }
                 },
                 {
