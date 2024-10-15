@@ -2,218 +2,67 @@
     "title": "Office de l'eau Réunion",
     "description": "Catalogue de l'Office de l'eau Réunion",
     "type": "folder",
-    "children": [
-        {
-            "title": "Administratif",
-            "description": "Données administratives",
-            "type": "folder",
-            "children": [
-                {
-                    "title": "EPCI de la Réunion",
-                    "description": "Établissements Publics de Coopération Intercommunale",
-                    "type": "wms_layer",
-                    "metadata_url": "https://dev-carto.ole.re/datahub/dataset/d350aa42-42d5-4294-bccc-80becb53e788", 
-                    "params": {
-                        "url": "https://dev-carto.ole.re/geoserver/wms?",
-                        "name": "ole:EPCI",
-                        "format": "image/png",
-                        "srs": "EPSG:2154"
-                    }
-                },
-                {
-                    "title": "Autre",
-                    "description": "Établissements Publics de Coopération Intercommunale",
-                    "type": "wms_layer",
-                    "metadata_url": "https://demo.georchestra.org/datahub/dataset/12345678", 
-                    "params": {
-                        "url": "https://services.sandre.eaufrance.fr/geo/epci?",
-                        "name": "epci",
-                        "format": "image/png",
-                        "srs": "EPSG:2154"
-                    }
-                }
-            ]
-        },
-        {
-            "title": "Captages",
-            "description": "Points de captage des ressources en eau",
-            "type": "folder",
-            "children": [
-                {
-                    "title": "Captages de surface",
-                    "description": "Points de captage des eaux superficielles",
-                    "type": "wms_layer",
-                    "metadata_url": "https://demo.georchestra.org/datahub/dataset/captages_surface_metadata", 
-                    "params": {
-                        "url": "https://services.sandre.eaufrance.fr/geo/captages_surface?",
-                        "name": "captages_surface",
-                        "format": "image/png",
-                        "srs": "EPSG:2154"
-                    }
-                },
-                {
-                    "title": "Captages souterrains",
-                    "description": "Points de captage des eaux souterraines",
-                    "type": "wms_layer",
-                    "metadata_url": "https://demo.georchestra.org/datahub/dataset/captages_souterrains_metadata", 
-                    "params": {
-                        "url": "https://services.sandre.eaufrance.fr/geo/captages_souterrains?",
-                        "name": "captages_souterrains",
-                        "format": "image/png",
-                        "srs": "EPSG:2154"
-                    }
-                }
-            ]
-        },
-        {
-            "title": "Bassins",
-            "description": "Bassins versants et hydrographiques",
-            "type": "folder",
-            "children": [
-                {
-                    "title": "Bassins versants",
-                    "description": "Délimitation des bassins versants",
-                    "type": "wms_layer",
-                    "metadata_url": "https://demo.georchestra.org/datahub/dataset/bassins_versants_metadata",  
-                    "params": {
-                        "url": "https://services.sandre.eaufrance.fr/geo/bassins_versants?",
-                        "name": "bassins_versants",
-                        "format": "image/png",
-                        "srs": "EPSG:2154"
-                    }
-                }
-            ]
-        },
-        {
-            "title": "Masses d'eau",
-            "description": "Masses d'eau côtières et souterraines",
-            "type": "folder",
-            "children": [
-                {
-                    "title": "Masses d'eau côtières",
-                    "description": "Définition des masses d'eau côtières",
-                    "type": "wms_layer",
-                    "metadata_url": "https://demo.georchestra.org/datahub/dataset/masses_eau_cotiere_metadata", 
-                    "params": {
-                        "url": "https://services.sandre.eaufrance.fr/geo/masses_eau_cotiere?",
-                        "name": "masses_eau_cotiere",
-                        "format": "image/png",
-                        "srs": "EPSG:2154"
-                    }
-                },
-                {
-                    "title": "Masses d'eau souterraines",
-                    "description": "Définition des masses d'eau souterraines",
-                    "type": "wms_layer",
-                    "metadata_url": "https://demo.georchestra.org/datahub/dataset/masses_eau_souterraine_metadata",  
-                    "params": {
-                        "url": "https://services.sandre.eaufrance.fr/geo/masses_eau_souterraine?",
-                        "name": "masses_eau_souterraine",
-                        "format": "image/png",
-                        "srs": "EPSG:2154"
-                    }
-                }
-            ]
-        },
-        {
-            "title": "Tronçons hydrographiques",
-            "description": "Tronçons des réseaux hydrographiques",
-            "type": "folder",
-            "children": [
-                {
-                    "title": "Tronçons de rivières",
-                    "description": "Tronçons des rivières et cours d'eau",
-                    "type": "wms_layer",
-                    "metadata_url": "https://demo.georchestra.org/datahub/dataset/troncons_riviere_metadata",  
-                    "params": {
-                        "url": "https://services.sandre.eaufrance.fr/geo/troncons_riviere?",
-                        "name": "troncons_riviere",
-                        "format": "image/png",
-                        "srs": "EPSG:2154"
-                    }
-                }
-            ]
-        },
-        {
-            "title": "Réseaux d'assainissement",
-            "description": "Données sur les réseaux d'assainissement",
-            "type": "folder",
-            "children": [
-                {
-                    "title": "Réseaux d'assainissement collectifs",
-                    "description": "Réseaux de collecte des eaux usées",
-                    "type": "wms_layer",
-                    "metadata_url": "https://demo.georchestra.org/datahub/dataset/assainissement_collectif_metadata", 
-                    "params": {
-                        "url": "https://services.sandre.eaufrance.fr/geo/reseaux_assainissement_collectif?",
-                        "name": "assainissement_collectif",
-                        "format": "image/png",
-                        "srs": "EPSG:2154"
-                    }
-                },
-                {
-                    "title": "Stations d'épuration",
-                    "description": "Stations de traitement des eaux usées",
-                    "type": "wms_layer",
-                    "metadata_url": "https://demo.georchestra.org/datahub/dataset/stations_epuration_metadata",  
-                    "params": {
-                        "url": "https://services.sandre.eaufrance.fr/geo/stations_epuration?",
-                        "name": "stations_epuration",
-                        "format": "image/png",
-                        "srs": "EPSG:2154"
-                    }
-                }
-            ]
-        },    
-        {
-            "title": "Points de mesure",
-            "description": "Points de mesure de la qualité des eaux",
-            "type": "folder",
-            "children": [
-                {
-                    "title": "Stations de mesure de la qualité des eaux",
-                    "description": "Stations pour la mesure de la qualité des eaux superficielles",
-                    "type": "wms_layer",
-                    "metadata_url": "https://demo.georchestra.org/datahub/dataset/stations_mesure_eaux_metadata", 
-                    "params": {
-                        "url": "https://services.sandre.eaufrance.fr/geo/stations_mesure_eaux?",
-                        "name": "stations_mesure_eaux",
-                        "format": "image/png",
-                        "srs": "EPSG:2154"
-                    }
-                }
-            ]
-        },
-        {
-            "title": "IGN",
-            "description": "Fonds de plan IGN",
-            "type": "folder",
-            "children": [
-                {
-                    "title": "Plan IGN",
-                    "description": "Plan IGN",
-                    "metadata_url": "https://geoservices.ign.fr/services-web-essentiels",
-                    "type": "wms_layer",
-                    "params": {
-                        "url": "https://wxs.ign.fr/essentiels/geoportail/r/wms?tiled=true",
-                        "name": "GEOGRAPHICALGRIDSYSTEMS.PLANIGNV2",
-                        "format": "image/png",
-                        "srs": "EPSG:2154"
-                    }
-                },
-                {
-                    "title": "Scan IGN",
-                    "description": "Scans de l'IGN 2017 (scan différent selon l'échelle)",
-                    "type": "wms_layer",
-                    "metadata_url": "http://www.ign.fr/",
-                    "params": {
-                        "url": "https://tile.geobretagne.fr/gwc02/service/wms?tiled=true",
-                        "name": "carte",
-                        "format": "image/png",
-                        "srs": "EPSG:2154"
-                    }
-                }
-            ]
+    "children":[
+    {
+        "title": "EPCI de la Réunion",
+        "description": "Établissements Publics de Coopération Intercommunale",
+        "type": "wms_layer",
+        "metadata_url": "https://dev-carto.ole.re/datahub/dataset/d350aa42-42d5-4294-bccc-80becb53e788",
+        "params": {
+            "url": "https://dev-carto.ole.re/geoserver/wms?",
+            "name": "ole:EPCI",
+            "format": "image/png",
+            "srs": "EPSG:2975"
         }
-    ]
+    },
+    {
+        "title": "Cours d'eau de la Réunion",
+        "description": "Répartition des cours d'eau sur l'île de la Réunion",
+        "type": "wms_layer",
+        "metadata_url": "https://dev-carto.ole.re/datahub/dataset/7967c60f-4c3c-4a19-8008-2236aed631d1",
+        "params": {
+            "url": "https://dev-carto.ole.re/geoserver/wms?",
+            "name": "ole:COURS_D_EAU",
+            "format": "image/png",
+            "srs": "EPSG:2975"
+        }
+    },
+    {
+        "title": "Arrondissement de la Réunion 2024",
+        "description": "Délimitation des arrondissements de la Réunion pour 2024",
+        "type": "wms_layer",
+        "metadata_url": "https://dev-carto.ole.re/datahub/dataset/7967c60f-4c3c-4a19-8008-2236aed631d1",
+        "params": {
+            "url": "https://dev-carto.ole.re/geoserver/wms?",
+            "name": "ole:ARRONDISSEMENT",
+            "format": "image/png",
+            "srs": "EPSG:2975"
+        }
+    },
+    {
+        "title": "Bassin versant topographique",
+        "description": "Données sur les bassins versants de la Réunion",
+        "type": "wms_layer",
+        "metadata_url": "https://dev-carto.ole.re/datahub/dataset/7967c60f-4c3c-4a19-8008-2236aed631d1",
+        "params": {
+            "url": "https://dev-carto.ole.re/geoserver/wms?",
+            "name": "ole:BASSIN_VERSANT_TOPOGRAPHIQUE",
+            "format": "image/png",
+            "srs": "EPSG:2975"
+        }
+    },
+    {
+        "title": "Plan d'eau de la Réunion",
+        "description": "Localisation des plans d'eau sur l'île",
+        "type": "wms_layer",
+        "metadata_url": "https://dev-carto.ole.re/datahub/dataset/7967c60f-4c3c-4a19-8008-2236aed631d1",
+        "params": {
+            "url": "https://dev-carto.ole.re/geoserver/wms?",
+            "name": "ole:PLAN_D_EAU",
+            "format": "image/png",
+            "srs": "EPSG:2975"
+        }
+    }
+]
+
 }
