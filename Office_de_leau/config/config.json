@@ -17,7 +17,8 @@
                         "url": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                         "name": "OpenStreetMap",
                         "format": "image/png",
-                        "srs": "EPSG:3857"
+                        "srs": "EPSG:3857",
+                        "crs": "EPSG:3857"
                     }
                 }
             ]
