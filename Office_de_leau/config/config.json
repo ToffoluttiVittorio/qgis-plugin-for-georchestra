@@ -10,16 +10,11 @@
             "children": [
                 {
                     "title": "OpenStreetMap",
-                    "description": "Fond de plan basé sur OpenStreetMap",
-                    "type": "wms_layer",
-                    "metadata_url": "https://wiki.openstreetmap.org/wiki/Tile_servers",
-                    "params": {
-                        "url": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
-                        "name": "OpenStreetMap",
-                        "format": "image/png",
-                        "srs": "EPSG:3857",
-                        "crs": "EPSG:3857"
-                    }
+                    "type": "xyz",
+                    "url": "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                    "minZoom": 0,
+                    "maxZoom": 19,
+                    "attribution": "© OpenStreetMap contributors"
                 }
             ]
         },
