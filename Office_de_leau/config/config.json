@@ -9,7 +9,7 @@
             "type": "folder",
             "children": [
                 {
-                    "title": "EPCI",
+                    "title": "EPCI de la Réunion",
                     "description": "Établissements Publics de Coopération Intercommunale",
                     "type": "wms_layer",
                     "metadata_url": "https://dev-carto.ole.re/datahub/dataset/d350aa42-42d5-4294-bccc-80becb53e788", 
