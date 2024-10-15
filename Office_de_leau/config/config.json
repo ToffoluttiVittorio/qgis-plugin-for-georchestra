@@ -4,6 +4,25 @@
     "type": "folder",
     "children": [
         {
+            "title": "Fond de Plan",
+            "description": "Couche de fond de plan OpenStreetMap",
+            "type": "folder",
+            "children": [
+                {
+                    "title": "OpenStreetMap",
+                    "description": "Fond de plan basé sur OpenStreetMap",
+                    "type": "wms_layer",
+                    "metadata_url": "https://wiki.openstreetmap.org/wiki/Tile_servers",
+                    "params": {
+                        "url": "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                        "name": "OpenStreetMap",
+                        "format": "image/png",
+                        "srs": "EPSG:3857"
+                    }
+                }
+            ]
+        },
+        {
             "title": "EPCI de la Réunion",
             "description": "Établissements Publics de Coopération Intercommunale",
             "type": "wfs_feature_type",
