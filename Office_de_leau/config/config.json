@@ -14,10 +14,10 @@
                     "type": "wms_layer_type",
                     "params": {
                         "url": "https://data.geopf.fr/wms-r?",
-                        "name": "BDORTHO",
-                        "format": "image/png",
+                        "name": "ORTHOIMAGERY.ORTHOPHOTOS",
+                        "format": "image/jpeg",
                         "crs": "EPSG:4326",
-
+                        "bbox": [55.116, -21.389, 55.836, -20.849]
                     }
                 }
             ]
