@@ -9,8 +9,8 @@
             "type": "folder",
             "children": [
                 {
-                    "title": "OpenStreetMap",
-                    "type": "xyz",
+                    "title": " Fond de plan OSM",
+                    "type": "wms_layer_type",
                     "url": "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                     "minZoom": 0,
                     "maxZoom": 19,
