@@ -9,12 +9,18 @@
             "type": "folder",
             "children": [
                 {
-                    "title": " Fond de plan OSM",
+                    "title": "BDOrtho IGN",
+                    "description": "Couche BDOrtho de l'IGN (raster ortho-imagerie)",
                     "type": "wms_layer_type",
-                    "url": "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
-                    "minZoom": 0,
-                    "maxZoom": 19,
-                    "attribution": "© OpenStreetMap contributors"
+                    "params": {
+                        "url": "https://data.geopf.fr/wms-r?",
+                        "layers": "BDORTHO",
+                        "format": "image/png",
+                        "version": "1.3.0",
+                        "crs": "EPSG:4326",
+                        "styles": "",
+                        "bbox": [-21.385, 55.219, -20.870, 55.837],
+                        "attribution": "IGN - BDOrtho"
                 }
             ]
         },
