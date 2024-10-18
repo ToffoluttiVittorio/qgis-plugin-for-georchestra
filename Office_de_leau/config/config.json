@@ -11,7 +11,7 @@
             "params": {
                 "url": "https://data.geopf.fr/wms-r?",
                 "version": "1.3.0",
-                "name": "ORTHOIMAGERY.ORTHOPHOTOS",
+                "name": "ORTHOIMAGERY.ORTHOPHOTOS.RESTRICTEDAREAS:arrete",
                 "srs": "EPSG:4326",
                 "format": "image/jpeg"
             },
