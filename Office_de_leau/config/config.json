@@ -19,7 +19,7 @@
             ]
         },
         {
-            "title": "Données",
+            "title": "Données de la Réunion",
             "description": "Ensemble des données géographiques de la Réunion",
             "type": "folder",
             "children": [
@@ -34,51 +34,131 @@
                         "outputFormat": "application/json",
                         "srs": "EPSG:2975"
                     }
-                },
+                }
+            ]
+        },
+        {
+            "title": "EDL 2025",
+            "description": "Données EDL 2025",
+            "type": "folder",
+            "children": [
                 {
-                    "title": "Cours d'eau de la Réunion",
-                    "description": "Répartition des cours d'eau sur l'île de la Réunion",
+                    "title": "EDL 2023 - Masse d'eau rivières",
+                    "description": "Masse d'eau rivières",
                     "type": "wfs_feature_type",
-                    "metadata_url": "https://dev-carto.ole.re/datahub/dataset/7967c60f-4c3c-4a19-8008-2236aed631d1",
                     "params": {
                         "url": "https://dev-carto.ole.re/geoserver/wfs?",
-                        "name": "ole:COURS_D_EAU",
+                        "name": "ole:MasseDEauRiviere_REU",
                         "outputFormat": "application/json",
                         "srs": "EPSG:2975"
                     }
                 },
                 {
-                    "title": "Arrondissement de la Réunion 2024",
-                    "description": "Délimitation des arrondissements de la Réunion pour 2024",
+                    "title": "EDL 2025 - BV 10K",
+                    "description": "BV 10K",
                     "type": "wfs_feature_type",
-                    "metadata_url": "https://dev-carto.ole.re/datahub/dataset/7967c60f-4c3c-4a19-8008-2236aed631d1",
                     "params": {
                         "url": "https://dev-carto.ole.re/geoserver/wfs?",
-                        "name": "ole:ARRONDISSEMENT",
+                        "name": "ole:Bv_10K",
+                        "outputFormat": "application/json",
+                        "srs": "EPSG:3857"
+                    }
+                },
+                {
+                    "title": "EDL 2025 - BVCE 2022",
+                    "description": "BVCE 2022",
+                    "type": "wfs_feature_type",
+                    "params": {
+                        "url": "https://dev-carto.ole.re/geoserver/wfs?",
+                        "name": "ole:BV_CE2022_1",
                         "outputFormat": "application/json",
                         "srs": "EPSG:2975"
                     }
                 },
                 {
-                    "title": "Bassin versant topographique",
-                    "description": "Données sur les bassins versants de la Réunion",
+                    "title": "EDL 2025 - BV_1K",
+                    "description": "BV_1K",
                     "type": "wfs_feature_type",
-                    "metadata_url": "https://dev-carto.ole.re/datahub/dataset/7967c60f-4c3c-4a19-8008-2236aed631d1",
                     "params": {
                         "url": "https://dev-carto.ole.re/geoserver/wfs?",
-                        "name": "ole:BASSIN_VERSANT_TOPOGRAPHIQUE",
+                        "name": "ole:BV_1K",
+                        "outputFormat": "application/json",
+                        "srs": "EPSG:3857"
+                    }
+                },
+                {
+                    "title": "EDL 2025 - BV_250",
+                    "description": "BV_250",
+                    "type": "wfs_feature_type",
+                    "params": {
+                        "url": "https://dev-carto.ole.re/geoserver/wfs?",
+                        "name": "ole:BV_250",
+                        "outputFormat": "application/json",
+                        "srs": "EPSG:3857"
+                    }
+                },
+                {
+                    "title": "EDL 2025 - Contour Ile de la Réunion",
+                    "description": "Contour de l'île",
+                    "type": "wfs_feature_type",
+                    "params": {
+                        "url": "https://dev-carto.ole.re/geoserver/wfs?",
+                        "name": "ole:Contour_ile_RE",
+                        "outputFormat": "application/json",
+                        "srs": "EPSG:3857"
+                    }
+                },
+                {
+                    "title": "EDL 2025 - MECE 22 - 27",
+                    "description": "MECE 22 - 27",
+                    "type": "wfs_feature_type",
+                    "params": {
+                        "url": "https://dev-carto.ole.re/geoserver/wfs?",
+                        "name": "ole:MECE_22-27",
+                        "outputFormat": "application/json",
+                        "srs": "EPSG:32740"
+                    }
+                },
+                {
+                    "title": "EDL 2025 - Masse d'eau côtières",
+                    "description": "Masse d'eau côtières",
+                    "type": "wfs_feature_type",
+                    "params": {
+                        "url": "https://dev-carto.ole.re/geoserver/wfs?",
+                        "name": "ole:MasseDEauCotiere_REU",
                         "outputFormat": "application/json",
                         "srs": "EPSG:2975"
                     }
                 },
                 {
-                    "title": "Plan d'eau de la Réunion",
-                    "description": "Localisation des plans d'eau sur l'île",
+                    "title": "EDL 2025 - Masse d'eau et plans d'eau",
+                    "description": "Masse d'eau et plans d'eau",
                     "type": "wfs_feature_type",
-                    "metadata_url": "https://dev-carto.ole.re/datahub/dataset/7967c60f-4c3c-4a19-8008-2236aed631d1",
                     "params": {
                         "url": "https://dev-carto.ole.re/geoserver/wfs?",
-                        "name": "ole:PLAN_D_EAU",
+                        "name": "ole:MasseDEauPlanDEau_REU",
+                        "outputFormat": "application/json",
+                        "srs": "EPSG:4326"
+                    }
+                },
+                {
+                    "title": "EDL 2025 - Masse d'eau rivières grand bassin",
+                    "description": "Masse d'eau rivières grand bassin",
+                    "type": "wfs_feature_type",
+                    "params": {
+                        "url": "https://dev-carto.ole.re/geoserver/wfs?",
+                        "name": "ole:MasseDEauRiviere_REUgrand_bassin_OK",
+                        "outputFormat": "application/json",
+                        "srs": "EPSG:2975"
+                    }
+                },
+                {
+                    "title": "EDL 2025 - Masse d'eau souterraines",
+                    "description": "Masse d'eau souterraines",
+                    "type": "wfs_feature_type",
+                    "params": {
+                        "url": "https://dev-carto.ole.re/geoserver/wfs?",
+                        "name": "ole:MasseDEauSouterraine_REU",
                         "outputFormat": "application/json",
                         "srs": "EPSG:2975"
                     }
