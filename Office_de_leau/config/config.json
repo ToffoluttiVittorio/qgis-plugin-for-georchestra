@@ -9,18 +9,15 @@
             "type": "folder",
             "children": [
                 {
-                    "title": "BDOrtho IGN",
+                    "title": "BD Ortho IGN",
                     "description": "Couche BDOrtho de l'IGN (raster ortho-imagerie)",
                     "type": "wms_layer_type",
                     "params": {
                         "url": "https://data.geopf.fr/wms-r?",
-                        "layers": "BDORTHO",
+                        "name": "BDORTHO",
                         "format": "image/png",
-                        "version": "1.3.0",
                         "crs": "EPSG:4326",
-                        "styles": "",
-                        "bbox": [-21.385, 55.219, -20.870, 55.837],
-                        "attribution": "IGN - BDOrtho"
+
                     }
                 }
             ]
