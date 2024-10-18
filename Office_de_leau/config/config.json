@@ -15,13 +15,10 @@
                     "type": "wmts",
                     "params": {
                         "url": "https://data.geopf.fr/wmts",
-                        "tilematrixset_name": "PM",
+                        "tilematrixset_name": "EPSG:2975",
                         "name": "ORTHOIMAGERY.ORTHOPHOTOS",
                         "format": "image/jpeg",
-                        "srs": "EPSG:3857",
-                        "tileMatrix": 9,
-                        "tileCol": 332,
-                        "tileRow": 286
+                        "srs": "EPSG:2975"
                     }
                 }
             ]
