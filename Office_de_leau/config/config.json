@@ -15,8 +15,7 @@
                     "params": {
                         "url": "https://data.geopf.fr/wmts",
                         "name": "ORTHOIMAGERY.ORTHOPHOTOS",
-                        "format": "image/jpeg",
-                        "tilematrixset_name": "PM", 
+                        "outputFormat": "image/jpeg",
                         "srs": "EPSG:3857"
                     }
                 }
