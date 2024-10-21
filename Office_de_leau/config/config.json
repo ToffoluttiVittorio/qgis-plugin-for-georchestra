@@ -9,24 +9,16 @@
             "type": "folder",
             "children": [
                 {
-                    "title": "BD Ortho IGN La Réunion",
-                    "description": "Orthophotographie aérienne de la Réunion publiée par l'IGN",
+                    "title": "Orthophoto IGN France",
+                    "description": "Orthophotographie aérienne publiée par l'IGN",
                     "type": "wmts",
                     "params": {
                         "url": "https://data.geopf.fr/wmts",
                         "name": "ORTHOIMAGERY.ORTHOPHOTOS",
                         "format": "image/jpeg",
-                        "tilematrixset_name": "PM",
+                        "tilematrixset_name": "PM", 
                         "srs": "EPSG:3857"
-                    },
-                    "bounding_boxes": [
-                        [
-                            6145633.44,  
-                            -2421601.63, 
-                            6227739.49, 
-                            -2339500.45 
-                        ]
-                    ]
+                    }
                 }
             ]
         },
