@@ -13,9 +13,9 @@
                     "description": "Orthophotographie aérienne publiée par l'IGN",
                     "type": "wms_layer",
                     "params": {
-                        "url": "https://data.geopf.fr/wms-r/wms?tiled=true",
+                        "url": "https://data.geopf.fr/wms-r/wms?",
                         "name": "ORTHOIMAGERY.ORTHOPHOTOS",
-                        "outputFormat": "image/png",
+                        "format": "image/jpeg",
                         "srs": "EPSG:3857"
                         
                     }
