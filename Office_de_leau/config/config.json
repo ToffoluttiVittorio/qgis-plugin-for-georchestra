@@ -11,21 +11,13 @@
                 {
                     "title": "Orthophoto IGN France",
                     "description": "Orthophotographie aérienne publiée par l'IGN",
-                    "type": "wms_layer",
+                    "type": "wmts_layer",
                     "params": {
                         "url": "https://data.geopf.fr/wms-r/wms?",
                         "name": "ORTHOIMAGERY.ORTHOPHOTOS",
                         "format": "image/jpeg",
                         "srs": "EPSG:3857"
-                    },
-                    "bounding_boxes": [
-                        [
-                          837587.0,
-                          6219135.0,
-                          892376.0,
-                          6260806.0
-                        ]
-                    ]
+                    }
                 },
                 {
                     "title": "MNT La Réunion (RGE Alti)",
