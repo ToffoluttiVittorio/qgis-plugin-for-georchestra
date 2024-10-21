@@ -57,125 +57,179 @@
             "type": "folder",
             "children": [
                 {
-                    "title": "EDL 2023 - Masse d'eau rivières",
-                    "description": "Masse d'eau rivières",
-                    "type": "wfs_feature_type",
-                    "params": {
-                        "url": "https://dev-carto.ole.re/geoserver/wfs?",
-                        "name": "ole:MasseDEauRiviere_REU",
-                        "outputFormat": "application/json",
-                        "srs": "EPSG:2975"
-                    }
+                    "title": "SIG Masse d'eaux",
+                    "type": "folder",
+                    "children": [
+                        {
+                            "title": "Cours d'eau 2019",
+                            "type": "folder",
+                            "children": [
+                                {
+                                    "title": "EDL 2023 - Masse d'eau rivières",
+                                    "description": "Masse d'eau rivières",
+                                    "type": "wfs_feature_type",
+                                    "params": {
+                                        "url": "https://dev-carto.ole.re/geoserver/wfs?",
+                                        "name": "ole:MasseDEauRiviere_REU",
+                                        "outputFormat": "application/json",
+                                        "srs": "EPSG:2975"
+                                    }
+                                },
+                                {
+                                    "title": "EDL 2025 - Masse d'eau rivières grand bassin",
+                                    "description": "Masse d'eau rivières grand bassin",
+                                    "type": "wfs_feature_type",
+                                    "params": {
+                                        "url": "https://dev-carto.ole.re/geoserver/wfs?",
+                                        "name": "ole:MasseDEauRiviere_REUgrand_bassin_OK",
+                                        "outputFormat": "application/json",
+                                        "srs": "EPSG:2975"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Cours d'eau 2022",
+                            "type": "folder",
+                            "children": [
+                                {
+                                    "title": "EDL 2025 - MECE 22 - 27",
+                                    "description": "MECE 22 - 27",
+                                    "type": "wfs_feature_type",
+                                    "params": {
+                                        "url": "https://dev-carto.ole.re/geoserver/wfs?",
+                                        "name": "ole:MECE_22-27",
+                                        "outputFormat": "application/json",
+                                        "srs": "EPSG:32740"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Cours d'eau BV 2022",
+                            "type": "folder",
+                            "children": [
+                                {
+                                    "title": "EDL 2025 - BVCE 2022",
+                                    "description": "BVCE 2022",
+                                    "type": "wfs_feature_type",
+                                    "params": {
+                                        "url": "https://dev-carto.ole.re/geoserver/wfs?",
+                                        "name": "ole:BV_CE2022_1",
+                                        "outputFormat": "application/json",
+                                        "srs": "EPSG:2975"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Eaux cotières",
+                            "type": "folder",
+                            "children": [  
+                                {
+                                    "title": "EDL 2025 - Masse d'eau côtières",
+                                    "description": "Masse d'eau côtières",
+                                    "type": "wfs_feature_type",
+                                    "params": {
+                                        "url": "https://dev-carto.ole.re/geoserver/wfs?",
+                                        "name": "ole:MasseDEauCotiere_REU",
+                                        "outputFormat": "application/json",
+                                        "srs": "EPSG:2975"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Eaux souterraines",
+                            "type": "folder",
+                            "children": [  
+                                {
+                                    "title": "EDL 2025 - Masse d'eau souterraines",
+                                    "description": "Masse d'eau souterraines",
+                                    "type": "wfs_feature_type",
+                                    "params": {
+                                        "url": "https://dev-carto.ole.re/geoserver/wfs?",
+                                        "name": "ole:MasseDEauSouterraine_REU",
+                                        "outputFormat": "application/json",
+                                        "srs": "EPSG:2975"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "title": "Plans d'eau",
+                            "type": "folder",
+                            "children": [   
+                                {
+                                    "title": "EDL 2025 - Masse d'eau et plans d'eau",
+                                    "description": "Masse d'eau et plans d'eau",
+                                    "type": "wfs_feature_type",
+                                    "params": {
+                                        "url": "https://dev-carto.ole.re/geoserver/wfs?",
+                                        "name": "ole:MasseDEauPlanDEau_REU",
+                                        "outputFormat": "application/json",
+                                        "srs": "EPSG:4326"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
                 },
                 {
-                    "title": "EDL 2025 - BV 10K",
-                    "description": "BV 10K",
-                    "type": "wfs_feature_type",
-                    "params": {
-                        "url": "https://dev-carto.ole.re/geoserver/wfs?",
-                        "name": "ole:Bv_10K",
-                        "outputFormat": "application/json",
-                        "srs": "EPSG:3857"
-                    }
+                    "title": "SIG Trace bassin versant",
+                    "type": "folder",
+                    "children": [
+                        {
+                            "title": "EDL 2025 - BV_250",
+                            "description": "BV_250",
+                            "type": "wfs_feature_type",
+                            "params": {
+                                "url": "https://dev-carto.ole.re/geoserver/wfs?",
+                                "name": "ole:BV_250",
+                                "outputFormat": "application/json",
+                                "srs": "EPSG:3857"
+                            }
+                        },
+                        {
+                            "title": "EDL 2025 - BV_1K",
+                            "description": "BV_1K",
+                            "type": "wfs_feature_type",
+                            "params": {
+                                "url": "https://dev-carto.ole.re/geoserver/wfs?",
+                                "name": "ole:BV_1K",
+                                "outputFormat": "application/json",
+                                "srs": "EPSG:3857"
+                            }
+                        },
+                        {
+                            "title": "EDL 2025 - BV 10K",
+                            "description": "BV 10K",
+                            "type": "wfs_feature_type",
+                            "params": {
+                                "url": "https://dev-carto.ole.re/geoserver/wfs?",
+                                "name": "ole:Bv_10K",
+                                "outputFormat": "application/json",
+                                "srs": "EPSG:3857"
+                            }
+                        }
+                    ]
                 },
                 {
-                    "title": "EDL 2025 - BVCE 2022",
-                    "description": "BVCE 2022",
-                    "type": "wfs_feature_type",
-                    "params": {
-                        "url": "https://dev-carto.ole.re/geoserver/wfs?",
-                        "name": "ole:BV_CE2022_1",
-                        "outputFormat": "application/json",
-                        "srs": "EPSG:2975"
-                    }
-                },
-                {
-                    "title": "EDL 2025 - BV_1K",
-                    "description": "BV_1K",
-                    "type": "wfs_feature_type",
-                    "params": {
-                        "url": "https://dev-carto.ole.re/geoserver/wfs?",
-                        "name": "ole:BV_1K",
-                        "outputFormat": "application/json",
-                        "srs": "EPSG:3857"
-                    }
-                },
-                {
-                    "title": "EDL 2025 - BV_250",
-                    "description": "BV_250",
-                    "type": "wfs_feature_type",
-                    "params": {
-                        "url": "https://dev-carto.ole.re/geoserver/wfs?",
-                        "name": "ole:BV_250",
-                        "outputFormat": "application/json",
-                        "srs": "EPSG:3857"
-                    }
-                },
-                {
-                    "title": "EDL 2025 - Contour Ile de la Réunion",
-                    "description": "Contour de l'île",
-                    "type": "wfs_feature_type",
-                    "params": {
-                        "url": "https://dev-carto.ole.re/geoserver/wfs?",
-                        "name": "ole:Contour_ile_RE",
-                        "outputFormat": "application/json",
-                        "srs": "EPSG:3857"
-                    }
-                },
-                {
-                    "title": "EDL 2025 - MECE 22 - 27",
-                    "description": "MECE 22 - 27",
-                    "type": "wfs_feature_type",
-                    "params": {
-                        "url": "https://dev-carto.ole.re/geoserver/wfs?",
-                        "name": "ole:MECE_22-27",
-                        "outputFormat": "application/json",
-                        "srs": "EPSG:32740"
-                    }
-                },
-                {
-                    "title": "EDL 2025 - Masse d'eau côtières",
-                    "description": "Masse d'eau côtières",
-                    "type": "wfs_feature_type",
-                    "params": {
-                        "url": "https://dev-carto.ole.re/geoserver/wfs?",
-                        "name": "ole:MasseDEauCotiere_REU",
-                        "outputFormat": "application/json",
-                        "srs": "EPSG:2975"
-                    }
-                },
-                {
-                    "title": "EDL 2025 - Masse d'eau et plans d'eau",
-                    "description": "Masse d'eau et plans d'eau",
-                    "type": "wfs_feature_type",
-                    "params": {
-                        "url": "https://dev-carto.ole.re/geoserver/wfs?",
-                        "name": "ole:MasseDEauPlanDEau_REU",
-                        "outputFormat": "application/json",
-                        "srs": "EPSG:4326"
-                    }
-                },
-                {
-                    "title": "EDL 2025 - Masse d'eau rivières grand bassin",
-                    "description": "Masse d'eau rivières grand bassin",
-                    "type": "wfs_feature_type",
-                    "params": {
-                        "url": "https://dev-carto.ole.re/geoserver/wfs?",
-                        "name": "ole:MasseDEauRiviere_REUgrand_bassin_OK",
-                        "outputFormat": "application/json",
-                        "srs": "EPSG:2975"
-                    }
-                },
-                {
-                    "title": "EDL 2025 - Masse d'eau souterraines",
-                    "description": "Masse d'eau souterraines",
-                    "type": "wfs_feature_type",
-                    "params": {
-                        "url": "https://dev-carto.ole.re/geoserver/wfs?",
-                        "name": "ole:MasseDEauSouterraine_REU",
-                        "outputFormat": "application/json",
-                        "srs": "EPSG:2975"
-                    }
+                    "title": "SIG Trace contour Réunion",
+                    "type": "folder",
+                    "children": [
+                        {
+                            "title": "EDL 2025 - Contour Ile de la Réunion",
+                            "description": "Contour de l'île",
+                            "type": "wfs_feature_type",
+                            "params": {
+                                "url": "https://dev-carto.ole.re/geoserver/wfs?",
+                                "name": "ole:Contour_ile_RE",
+                                "outputFormat": "application/json",
+                                "srs": "EPSG:3857"
+                            }
+                        }
+                    ]
                 }
             ]
         }
