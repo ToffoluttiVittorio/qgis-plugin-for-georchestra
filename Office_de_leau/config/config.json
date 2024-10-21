@@ -11,9 +11,9 @@
                 {
                     "title": "Orthophoto IGN France",
                     "description": "Orthophotographie aérienne publiée par l'IGN",
-                    "type": "wmts_layer",
+                    "type": "wms_layer",
                     "params": {
-                        "url": "https://data.geopf.fr/wmts",
+                        "url": "https://data.geopf.fr/wms-r",
                         "name": "ORTHOIMAGERY.ORTHOPHOTOS",
                         "outputFormat": "image/jpeg",
                         "srs": "EPSG:3857"
