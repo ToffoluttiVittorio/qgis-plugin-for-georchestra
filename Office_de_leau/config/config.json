@@ -14,13 +14,9 @@
                     "type": "wmts_layer",
                     "params": {
                         "url": "https://data.geopf.fr/wmts",
-                        "group": "background",
-                        "visibility" : false,
-                        "allowedSRS": { "EPSG:3857": true },
-                        "matrixIds": [ "PM", "EPSG:3857" ],
-                        "tileMatrixSet": true,
                         "name": "ORTHOIMAGERY.ORTHOPHOTOS",
-                        "format": "image/jpeg",
+                        "outputFormat": "image/jpeg",
+                        "srs": "EPSG:2154"
                     }
                 }
             ]
