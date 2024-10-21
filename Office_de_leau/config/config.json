@@ -17,7 +17,15 @@
                         "name": "ORTHOIMAGERY.ORTHOPHOTOS",
                         "format": "image/jpeg",
                         "srs": "EPSG:3857"
-                    }
+                    },
+                    "bounding_boxes": [
+                        [
+                          837587.0,
+                          6219135.0,
+                          892376.0,
+                          6260806.0
+                        ]
+                    ]
                 },
                 {
                     "title": "MNT La Réunion (RGE Alti)",
