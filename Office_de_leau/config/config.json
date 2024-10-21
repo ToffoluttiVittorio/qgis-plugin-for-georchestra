@@ -17,7 +17,17 @@
                         "name": "ORTHOIMAGERY.ORTHOPHOTOS",
                         "format": "image/jpeg",
                         "srs": "EPSG:3857"
-                        
+                    }
+                },
+                {
+                    "title": "MNT La Réunion (RGE Alti)",
+                    "description": "Le MNT RGE ALTI® est un modèle numérique de terrain maillé diffusé aux pas de 1 m et 5m.",
+                    "type": "wms_layer",
+                    "params": {
+                        "url": "https://data.geopf.fr/wms-r/wms?",
+                        "name": "RGEALTI-MNT_PYR-ZIP_REU_RGR92UTM40S_WMS",
+                        "format": "image/jpeg",
+                        "srs": "EPSG:2975"
                     }
                 }
             ]
