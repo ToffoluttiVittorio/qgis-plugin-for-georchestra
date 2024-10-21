@@ -16,7 +16,6 @@
                         "url": "https://data.geopf.fr/wmts",
                         "name": "ORTHOIMAGERY.ORTHOPHOTOS",
                         "outputFormat": "image/jpeg",
-                        "srs": "EPSG:2154"
                     }
                 }
             ]
