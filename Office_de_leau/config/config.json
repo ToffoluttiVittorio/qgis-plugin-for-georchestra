@@ -48,6 +48,19 @@
                         "outputFormat": "application/json",
                         "srs": "EPSG:2975"
                     }
+                },
+                {
+                    "title": "Test de données",
+                    "description": "Description",
+                    "type": "wms_layer",
+                    "metadata_url": "https://dev-carto.ole.re/datahub/dataset/d350aa42-42d5-4294-bccc-80becb53e788",
+                    "params": {
+                        "url": "https://dev-carto.ole.re/geoserver/wfs?",
+                        "name": "ole:EPCI",
+                        "outputFormat": "img/jpeg",
+                        "styles": "label_and_fill___e5699710-905f-11ef-932c-d54c46b821eb",
+                        "srs": "EPSG:2975"
+                    }
                 }
             ]
         },
