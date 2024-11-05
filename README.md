@@ -3,3 +3,5 @@ Test de plugin pour QGIS 3 fournissant un accès simple aux flux de géographiqu
 
 Il s'agit d'un fork du plugin réalisé par l'Office de l'eau Réunion à partir de :
 https://github.com/geobretagne/qgis-plugin
+
+Il est possible d'automatiser l'intégration des données depuis geonetwork avec l'API elasticsearch, voir "script_automatisation.txt". 
